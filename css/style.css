@@ -1,0 +1,507 @@
+/* Variables CSS para colores */
+:root {
+    --primary-color: #4CAF50; /* Verde brillante */
+    --secondary-color: #2196F3; /* Azul vibrante */
+    --accent-color: #FFC107; /* Amarillo soleado */
+    --text-color: #333;
+    --light-gray: #f4f4f4;
+    --dark-gray: #555;
+    --white: #ffffff;
+    --shadow: rgba(0, 0, 0, 0.1);
+}
+
+/* Reset básico y estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--light-gray);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Encabezados */
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+    color: var(--dark-gray);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.8em;
+    color: var(--primary-color);
+}
+
+h2 {
+    font-size: 2.2em;
+    color: var(--secondary-color);
+}
+
+h3 {
+    font-size: 1.8em;
+    color: var(--dark-gray);
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+.intro-text {
+    font-size: 1.1em;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    color: var(--dark-gray);
+}
+
+/* Navegación */
+.navbar {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 15px 0;
+    box-shadow: 0 2px 10px var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8em;
+    font-weight: 700;
+    color: var(--white);
+    text-decoration: none;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.navbar .nav-links li {
+    margin-left: 25px;
+}
+
+.navbar .nav-links a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-links a:hover {
+    color: var(--accent-color);
+}
+
+/* Botones */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-primary {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    box-shadow: 0 4px 10px rgba(33, 150, 243, 0.3);
+}
+
+.btn-primary:hover {
+    background-color: #1976D2; /* Un tono más oscuro de azul */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(33, 150, 243, 0.4);
+}
+
+.btn-secondary {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    box-shadow: 0 4px 10px rgba(255, 193, 7, 0.3);
+}
+
+.btn-secondary:hover {
+    background-color: #FFB300; /* Un tono más oscuro de amarillo */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(255, 193, 7, 0.4);
+}
+
+/* Secciones principales */
+main {
+    flex-grow: 1; /* Permite que main ocupe el espacio restante */
+}
+
+.hero-section {
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    color: var(--white);
+    text-align: center;
+    padding: 80px 20px;
+    border-bottom-left-radius: 80px;
+    border-bottom-right-radius: 80px;
+    margin-bottom: 40px;
+}
+
+.hero-section h1 {
+    color: var(--white);
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-section p {
+    font-size: 1.3em;
+    max-width: 700px;
+    margin: 0 auto 40px;
+}
+
+.content-section {
+    padding: 60px 0;
+    background-color: var(--white);
+    border-radius: 15px;
+    box-shadow: 0 4px 20px var(--shadow);
+    margin-bottom: 40px;
+}
+
+.features-section {
+    padding: 60px 0;
+    background-color: var(--light-gray);
+    text-align: center;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.feature-item {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px var(--shadow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-10px);
+}
+
+.feature-item i {
+    font-size: 3em;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.feature-item h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: var(--secondary-color);
+}
+
+/* Sección de Citas */
+.quote-section {
+    background-color: var(--dark-gray);
+    color: var(--white);
+    padding: 60px 20px;
+    text-align: center;
+    border-radius: 15px;
+    margin-bottom: 40px;
+}
+
+.quote-section blockquote {
+    font-size: 1.8em;
+    font-style: italic;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.quote-section cite {
+    display: block;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+/* Tarjetas de Información */
+.info-card {
+    background-color: var(--light-gray);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px var(--shadow);
+    margin-bottom: 30px;
+}
+
+.info-card h2 {
+    color: var(--primary-color);
+    text-align: left;
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.info-card ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 15px;
+}
+
+.info-card ul li {
+    background-color: var(--white);
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.info-card p strong {
+    color: var(--secondary-color);
+}
+
+/* Acordeón para contenido interactivo */
+.accordion {
+    margin-top: 30px;
+}
+
+.accordion-item {
+    background-color: var(--white);
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 10px var(--shadow);
+    overflow: hidden;
+}
+
+.accordion-header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 18px 25px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.accordion-header i {
+    margin-right: 15px;
+    transition: transform 0.3s ease;
+}
+
+.accordion-header.active {
+    background-color: #388E3C; /* Tono más oscuro de verde */
+}
+
+.accordion-header.active i {
+    transform: rotate(90deg);
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    padding: 0 25px;
+}
+
+.accordion-content p, .accordion-content ul {
+    padding-top: 15px;
+    padding-bottom: 5px;
+}
+
+.accordion-content ul {
+    list-style: disc;
+    padding-left: 40px;
+}
+
+.accordion-content ul li {
+    margin-bottom: 8px;
+}
+
+
+/* Cajas de Llamada a la Acción */
+.call-to-action-box {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    margin-top: 50px;
+    box-shadow: 0 6px 20px rgba(33, 150, 243, 0.4);
+}
+
+.call-to-action-box h3 {
+    color: var(--white);
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+.call-to-action-box p {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+}
+
+.call-to-action-box .btn-primary {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    box-shadow: none; /* Quitamos la sombra para un contraste visual */
+}
+
+.call-to-action-box .btn-primary:hover {
+    background-color: #FFB300;
+    transform: translateY(-2px);
+}
+
+/* Sección de Recursos */
+.resource-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.resource-card {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px var(--shadow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease;
+    min-height: 280px; /* Asegura altura mínima para uniformidad */
+    justify-content: space-between; /* Distribuye el contenido */
+}
+
+.resource-card:hover {
+    transform: translateY(-10px);
+}
+
+.resource-card .icon-large {
+    font-size: 3.5em;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.resource-card h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: var(--secondary-color);
+}
+
+.resource-card p {
+    flex-grow: 1; /* Permite que el párrafo ocupe el espacio flexible */
+    margin-bottom: 20px;
+}
+
+
+/* Footer */
+footer {
+    background-color: var(--dark-gray);
+    color: var(--white);
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 50px;
+    border-top-left-radius: 80px;
+    border-top-right-radius: 80px;
+}
+
+footer .social-links a {
+    color: var(--white);
+    font-size: 1.5em;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+footer .social-links a:hover {
+    color: var(--accent-color);
+}
+
+/* Media Queries para Responsive Design */
+@media (max-width: 768px) {
+    .navbar .nav-links {
+        display: none; /* Oculta el menú en pantallas pequeñas por defecto */
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--primary-color);
+        position: absolute;
+        top: 60px; /* Ajusta según la altura del navbar */
+        left: 0;
+    }
+
+    .navbar .nav-links.active {
+        display: flex; /* Muestra el menú cuando está activo (con un botón de hamburguesa, por ejemplo) */
+    }
+
+    .navbar .nav-links li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .hero-section h1 {
+        font-size: 2.5em;
+    }
+
+    .hero-section p {
+        font-size: 1em;
+    }
+
+    .feature-grid, .resource-grid {
+        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+    }
+
+    .quote-section blockquote {
+        font-size: 1.3em;
+    }
+
+    .accordion-header {
+        font-size: 1em;
+        padding: 15px 20px;
+    }
+
+    .accordion-content {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section {
+        border-bottom-left-radius: 40px;
+        border-bottom-right-radius: 40px;
+    }
+    footer {
+        border-top-left-radius: 40px;
+        border-top-right-radius: 40px;
+    }
+}
